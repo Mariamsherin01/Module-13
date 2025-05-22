@@ -40,6 +40,6 @@ print(f"Stack before elements are popped \n{stack}\n\nStack after elements are p
 ![image](https://github.com/user-attachments/assets/b5bb109a-c6d8-4f10-b0e9-73d3de3a1d58) 
 ---
 ### RESULT 
----
+```
 Thus, The  Python program to implement a stack using a list and its built-in methods (`append()`, `pop()`) is implemented and executed sussessfully.
 ---
