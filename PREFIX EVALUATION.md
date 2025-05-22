@@ -28,6 +28,29 @@ To write a Python program to evaluate a user-given Prefix expression using a sta
 ### PROGRAM
 
 ```
+OPERATORS=set(['*','-','+','%','/','**']) 
+
+def evaluate(expression):
+	
+    stack = []
+    for i in expression[::-1]:
+        if i not in OPERATORS:
+            stack.append(i)
+        else:
+	        a=stack.pop()
+	        b=stack.pop()
+	        if(i=='+'):
+	            res=int(a)+int(b)
+	        elif(i=='-'):
+	            res=int(a)-int(b)
+	        elif(i=='*'):
+	            res=int(a)*int(b)
+	        stack.append(res)
+    return stack[0]
+	       
+expression=input()
+print("Prefix Expression :",expression)
+print("Evaluation result :",evaluate(expression))
 
 
 ```
@@ -35,6 +58,8 @@ To write a Python program to evaluate a user-given Prefix expression using a sta
 
 ### OUTPUT
 
+![image](https://github.com/user-attachments/assets/7a7ad6c4-b8ba-41bf-b512-139896b0e6a0)
 
 
 ### RESULT
+Thus, The Python program to evaluate a user-given Prefix expression using a stack. The expression must contain operators such as Multiplication, Addition, and Subtraction is implemented and executed successfully.
